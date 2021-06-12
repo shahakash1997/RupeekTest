@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_common"
+        android:layout_marginTop="@dimen/dimen_common_small"
+        android:layout_marginEnd="@dimen/dimen_common"
+        android:layout_marginBottom="@dimen/dimen_common_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivPlace"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvPlaceAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPlaceName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llIcons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPlaceAddress"
+                android:layout_alignParentBottom="true"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_common_small">
+
+                <ImageView
+                    android:id="@+id/ivUpvote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/dimen_common_small"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    app:tint="@color/gray_deep" />
+
+                <ImageView
+                    android:id="@+id/ivDirec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/dimen_common_small"
+                    android:src="@drawable/ic_baseline_directions_24"
+                    app:tint="@color/gray_deep" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
